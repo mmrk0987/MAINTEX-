@@ -1,0 +1,17 @@
+{
+  "name": "MAINTEX — Industrial Factory Maintenance System",
+  "short_name": "MAINTEX",
+  "description": "Industrial Factory Maintenance Management System (CMMS)",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0D1014",
+  "theme_color": "#0070F3",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

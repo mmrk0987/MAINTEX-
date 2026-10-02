@@ -1,0 +1,6 @@
+{
+  "name": "Aegis CMMS — Industrial Factory Maintenance & Reliability Platform",
+  "description": "Industrial Factory Maintenance Management System with multi-account Gmail login, real-time PostgreSQL backup sync, Asset Management, Breakdown & Preventive Maintenance, 4-stage Complaint Workflow, MRO Store Inventory, and Procurement.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

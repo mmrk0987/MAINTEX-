@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0070F3" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+    <linearGradient id="gearGrad" x1="12" y1="12" x2="52" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F8FAFC" />
+      <stop offset="100%" stop-color="#BAE6FD" />
+    </linearGradient>
+  </defs>
+  <!-- Rounded Industrial Badge Base -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#0D1014" stroke="url(#bgGrad)" stroke-width="4" />
+  <rect x="6" y="6" width="52" height="52" rx="10" fill="url(#bgGrad)" fill-opacity="0.18" />
+
+  <!-- Outer Precision Gear Teeth -->
+  <path
+    d="M30 10h4l1 4.2a16.5 16.5 0 0 1 4.1 1.7l3.7-2.2 2.8 2.8-2.2 3.7a16.5 16.5 0 0 1 1.7 4.1L49.3 25v4l-4.2 1a16.5 16.5 0 0 1-1.7 4.1l2.2 3.7-2.8 2.8-3.7-2.2a16.5 16.5 0 0 1-4.1 1.7L34 44.3h-4l-1-4.2a16.5 16.5 0 0 1-4.1-1.7l-3.7 2.2-2.8-2.8 2.2-3.7a16.5 16.5 0 0 1-1.7-4.1L14.7 29v-4l4.2-1a16.5 16.5 0 0 1 1.7-4.1l-2.2-3.7 2.8-2.8 3.7 2.2a16.5 16.5 0 0 1 4.1-1.7L30 10Z"
+    stroke="#38BDF8"
+    stroke-width="2"
+    stroke-opacity="0.45"
+    fill="none"
+  />
+
+  <!-- Bold MAINTEX "M" + Wrench Monogram -->
+  <path
+    d="M17 45V19h6.2l8.8 13.5L40.8 19H47v26h-6V29.8L33.8 41h-3.6L23 29.8V45h-6Z"
+    fill="url(#gearGrad)"
+  />
+
+  <!-- Status Indicator Dot -->
+  <circle cx="49" cy="15" r="4" fill="#10B981" stroke="#0D1014" stroke-width="1.5" />
+</svg>

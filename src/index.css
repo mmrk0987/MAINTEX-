@@ -1,0 +1,277 @@
+@import "tailwindcss";
+
+@layer base {
+  /* ==========================================================================
+     ENTERPRISE INDUSTRIAL SAAS & CMMS DESIGN SYSTEM (LINEAR / VERCEL / STRIPE)
+     ========================================================================== */
+  :root,
+  [data-theme="light"],
+  .light {
+    color-scheme: light;
+    /* 1. Light Mode Canvas: Soft cool slate/off-white (#F8FAFC) */
+    --bg-primary: #F8FAFC;
+    /* 2. Card/Container Background: Pure white (#FFFFFF) */
+    --bg-surface: #FFFFFF;
+    /* 3. Subtle secondary surface & table headers */
+    --bg-secondary: #F1F5F9;
+    /* 4. Subtle 1px border (#E2E8F0) */
+    --border-color: #E2E8F0;
+    /* 5. Typography Hierarchy: Metric #0F172A, Headings #1E293B, Muted #64748B */
+    --text-primary: #0F172A;
+    --text-heading: #1E293B;
+    --text-secondary: #64748B;
+    --text-muted: #94A3B8;
+    /* 6. Active Tabs & Primary Buttons: Deep Cobalt / Royal Blue (#2563EB) */
+    --accent-color: #2563EB;
+    --accent-hover: #1D4ED8;
+    --accent-text: #2563EB;
+    /* 7. Soft Elevation Drop Shadow */
+    --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(15, 23, 42, 0.03);
+
+    /* Status Badges (Light Mode) */
+    --badge-critical-bg: #FEF2F2;     /* bg-red-50 */
+    --badge-critical-text: #B91C1C;   /* text-red-700 */
+    --badge-critical-border: #FECACA; /* border-red-200 */
+
+    --badge-warning-bg: #FFFBEB;      /* bg-amber-50 */
+    --badge-warning-text: #B45309;    /* text-amber-700 */
+    --badge-warning-border: #FDE68A;  /* border-amber-200 */
+
+    --badge-success-bg: #ECFDF5;      /* bg-emerald-50 */
+    --badge-success-text: #047857;    /* text-emerald-700 */
+    --badge-success-border: #A7F3D0;  /* border-emerald-200 */
+
+    --badge-info-bg: #EFF6FF;         /* bg-blue-50 */
+    --badge-info-text: #1D4ED8;       /* text-blue-700 */
+    --badge-info-border: #BFDBFE;     /* border-blue-200 */
+  }
+
+  [data-theme="dark"],
+  .dark {
+    color-scheme: dark;
+    /* 1. Dark Mode Canvas: Deep navy slate (#0B0F17) — never pitch black */
+    --bg-primary: #0B0F17;
+    /* 2. Dark Mode Containers & Cards: Elevated slate (#1E293B) */
+    --bg-surface: #1E293B;
+    /* 3. Secondary / Table Header surface */
+    --bg-secondary: #0F172A;
+    /* 4. Subtle 1px border (#334155) */
+    --border-color: #334155;
+    /* 5. Typography Hierarchy (Dark Mode) */
+    --text-primary: #F8FAFC;
+    --text-heading: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    /* 6. Active Tabs & Primary Buttons: Deep Cobalt / Royal Blue (#2563EB) */
+    --accent-color: #2563EB;
+    --accent-hover: #1D4ED8;
+    --accent-text: #60A5FA;
+    --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.28), 0 1px 2px rgba(0, 0, 0, 0.18);
+
+    /* Status Badges (Dark Mode) */
+    --badge-critical-bg: rgba(239, 68, 68, 0.14);
+    --badge-critical-text: #FCA5A5;
+    --badge-critical-border: rgba(239, 68, 68, 0.35);
+
+    --badge-warning-bg: rgba(245, 158, 11, 0.14);
+    --badge-warning-text: #FCD34D;
+    --badge-warning-border: rgba(245, 158, 11, 0.35);
+
+    --badge-success-bg: rgba(16, 185, 129, 0.14);
+    --badge-success-text: #6EE7B7;
+    --badge-success-border: rgba(16, 185, 129, 0.35);
+
+    --badge-info-bg: rgba(37, 99, 235, 0.18);
+    --badge-info-text: #93C5FD;
+    --badge-info-border: rgba(59, 130, 246, 0.4);
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Inter', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    color: var(--text-heading);
+  }
+
+  .font-mono-tech {
+    font-family: 'IBM Plex Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* ==========================================================================
+   SEMANTIC ENTERPRISE COMPONENT CLASSES
+   ========================================================================== */
+.cmms-canvas {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.cmms-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+  border-radius: 12px;
+}
+
+.cmms-secondary {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+.cmms-badge-critical {
+  background-color: var(--badge-critical-bg);
+  color: var(--badge-critical-text);
+  border: 1px solid var(--badge-critical-border);
+}
+
+.cmms-badge-warning {
+  background-color: var(--badge-warning-bg);
+  color: var(--badge-warning-text);
+  border: 1px solid var(--badge-warning-border);
+}
+
+.cmms-badge-success {
+  background-color: var(--badge-success-bg);
+  color: var(--badge-success-text);
+  border: 1px solid var(--badge-success-border);
+}
+
+.cmms-badge-info {
+  background-color: var(--badge-info-bg);
+  color: var(--badge-info-text);
+  border: 1px solid var(--badge-info-border);
+}
+
+.cmms-input {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  border-radius: 8px;
+}
+.cmms-input:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+  outline: none;
+}
+
+/* ==========================================================================
+   TOKEN MAPPING FOR LEGACY CLASSES ACROSS ALL MODULES
+   ========================================================================== */
+.bg-\[\#0D1014\],
+.bg-\[\#0D1014\]\/50,
+.bg-\[\#0D1014\]\/60 {
+  background-color: var(--bg-primary) !important;
+}
+
+.bg-\[\#151A21\] {
+  background-color: var(--bg-surface) !important;
+  box-shadow: var(--card-shadow);
+  border-radius: 12px;
+}
+
+.bg-\[\#1C222B\],
+.hover\:bg-\[\#1C222B\]:hover,
+.hover\:bg-\[\#1C222B\]\/50:hover,
+.hover\:bg-\[\#1C222B\]\/60:hover {
+  background-color: var(--bg-secondary) !important;
+}
+
+.border-\[\#262F3D\] {
+  border-color: var(--border-color) !important;
+}
+
+.divide-\[\#262F3D\] > :not([hidden]) ~ :not([hidden]) {
+  border-color: var(--border-color) !important;
+}
+
+.text-\[\#F1F5F9\],
+.text-\[\#E2E8F0\],
+.hover\:text-\[\#F1F5F9\]:hover {
+  color: var(--text-primary) !important;
+}
+
+.text-\[\#94A3B8\] {
+  color: var(--text-secondary) !important;
+}
+
+.text-\[\#64748B\] {
+  color: var(--text-muted) !important;
+}
+
+.text-\[\#38BDF8\],
+.text-\[\#0070F3\] {
+  color: var(--accent-text) !important;
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
+
+.print-only {
+  display: none;
+}
+
+/* ==========================================================================
+   PRINT-READY / PDF EXPORT STYLESHEET
+   ========================================================================== */
+@media print {
+  :root,
+  [data-theme="dark"],
+  [data-theme="light"],
+  .dark,
+  .light,
+  body {
+    --bg-primary: #FFFFFF !important;
+    --bg-surface: #FFFFFF !important;
+    --bg-secondary: #F8FAFC !important;
+    --border-color: #CBD5E1 !important;
+    --text-primary: #0F172A !important;
+    --text-heading: #1E293B !important;
+    --text-secondary: #475569 !important;
+    --text-muted: #64748B !important;
+    --accent-color: #2563EB !important;
+    --accent-text: #2563EB !important;
+    background-color: #FFFFFF !important;
+    color: #0F172A !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  main {
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  .cmms-card,
+  .bg-\[\#151A21\],
+  .bg-\[\#0D1014\] {
+    background-color: #FFFFFF !important;
+    border-color: #CBD5E1 !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+}
